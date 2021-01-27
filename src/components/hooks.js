@@ -10,7 +10,7 @@
 // and within the component code it'll all take just one short line
 
 import { useDispatch, useSelector } from 'react-redux';
-import { getReports } from '../api/reports';
+import { getReports } from '../store/actions/reports';
 import { getCategories } from '../store/actions/categories';
 
 export const useCategories = () => {

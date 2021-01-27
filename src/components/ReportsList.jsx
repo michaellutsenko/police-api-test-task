@@ -17,14 +17,14 @@ const ReportsList = () => {
     return <div>No reports for given date in selected category</div>;
   }
 
-  return (
+  return reports ? (
     <div>
       {reports.map((report) => (
         // The id property is a database ID, which works nicely as a key for iterables
         <Report key={report.id} report={report} />
       ))}
     </div>
-  );
+  ) : null;
 };
 
 export default ReportsList;

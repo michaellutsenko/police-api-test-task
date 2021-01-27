@@ -11,7 +11,7 @@ const CategoriesDropdown = () => {
   const dispatch = useDispatch();
   const { categories, loading } = useCategories();
 
-  return loading ? (
+  return !loading ? (
     <div>
       <span>Category:&nbsp;</span>
       <Select
