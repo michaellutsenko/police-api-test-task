@@ -1,7 +1,8 @@
 .app {
   height: 100vh;
   width: 45vw;
-  background-color: #c7ccdb;
+  background-color: #ccd6eb;
+  /* background-color: #c7ccdb; */
   padding: 20px;
   display: grid;
   grid-template-rows: 40px auto minmax(0, 1fr);
@@ -40,7 +41,7 @@
   width: 60%;
   padding: 15px;
   border-radius: 6px;
-  background-color: #e1e5ee;
+  background-color: #e9ecf5;
 }
 
 .report .caption {

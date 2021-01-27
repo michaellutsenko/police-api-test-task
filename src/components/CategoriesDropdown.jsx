@@ -15,7 +15,6 @@ const CategoriesDropdown = () => {
     <div className="categories-container">
       <span>Category:&nbsp;</span>
       <Select
-        className="dropdown"
         defaultValue={{ value: 'all-crime', label: 'All crime' }}
         options={categories}
         // When we pick a category, we'll request a new set of reports
