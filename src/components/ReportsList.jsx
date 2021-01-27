@@ -10,15 +10,19 @@ const ReportsList = () => {
   // pagination, we can just replace the entire list with the loading indicator
   // whenever the loading flag changes
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="reports-list empty">Loading...</div>;
   }
 
   if (Array.isArray(reports) && reports.length === 0) {
-    return <div>No reports for given date in selected category</div>;
+    return (
+      <div className="reports-list empty">
+        No reports for given date in selected category
+      </div>
+    );
   }
 
   return reports ? (
-    <div>
+    <div className="reports-list">
       {reports.map((report) => (
         // The id property is a database ID, which works nicely as a key for iterables
         <Report key={report.id} report={report} />

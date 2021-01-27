@@ -4,7 +4,8 @@ import ReportsList from './components/ReportsList';
 
 function App() {
   return (
-    <div>
+    <div className="app">
+      <h1>Police reports</h1>
       <CategoriesDropdown />
       <ReportsList />
     </div>

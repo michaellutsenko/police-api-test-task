@@ -12,9 +12,15 @@ const Report = ({ report }) => {
   };
 
   return !!report ? (
-    <div>
-      <p>Category: {getCategoryName(report.category)}</p>
-      <p>Outcome: {report.outcome_status.category}</p>
+    <div className="report">
+      <p>
+        <span className="caption">Category:&nbsp;</span>
+        {getCategoryName(report.category)}
+      </p>
+      <p>
+        <span className="caption">Outcome:&nbsp;</span>{' '}
+        {report.outcome_status.category}
+      </p>
       {!!report.context && <p>{report.context}</p>}
     </div>
   ) : null;
