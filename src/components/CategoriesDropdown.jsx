@@ -15,7 +15,7 @@ const CategoriesDropdown = () => {
     <div>
       <span>Category:&nbsp;</span>
       <Select
-        defaultValue={{ value: 'all-crime', label: 'All crime and ASB' }}
+        defaultValue={{ value: 'all-crime', label: 'All crime' }}
         options={categories}
         // When we pick a category, we'll request a new set of reports
         // Granted, we don't have to do this and could just filter through
