@@ -11,10 +11,15 @@ const CategoriesDropdown = () => {
   const dispatch = useDispatch();
   const { categories, loading } = useCategories();
 
-  return !loading ? (
-    <div className="categories-container">
-      <span>Category:&nbsp;</span>
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  return categories ? (
+    <div className="categories-container" data-testid="categoriesContainer">
+      <span>Category:</span>
       <Select
+        className="dropdown"
         defaultValue={{ value: 'all-crime', label: 'All crime' }}
         options={categories}
         // When we pick a category, we'll request a new set of reports
@@ -27,9 +32,7 @@ const CategoriesDropdown = () => {
         }}
       />
     </div>
-  ) : (
-    <div>Loading...</div>
-  );
+  ) : null;
 };
 
 export default CategoriesDropdown;

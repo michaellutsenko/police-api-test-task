@@ -4,7 +4,6 @@ import { useReports } from './hooks';
 
 const ReportsList = () => {
   const { reports, loading } = useReports();
-
   // If we had a pagination, the loading flag would both show the initial
   // request state and the pagination request. Since the API doesn't implement
   // pagination, we can just replace the entire list with the loading indicator
@@ -22,7 +21,7 @@ const ReportsList = () => {
   }
 
   return reports ? (
-    <div className="reports-list">
+    <div className="reports-list" data-testid="reportsList">
       {reports.map((report) => (
         // The id property is a database ID, which works nicely as a key for iterables
         <Report key={report.id} report={report} />
