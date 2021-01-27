@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Police crime reports
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_A test task by Michael Lutsenko_
 
-## Available Scripts
+## Getting it to run
 
-In the project directory, you can run:
+Run `npm install` to install dependencies. Run `npm start` to launch the app in development mode.
 
-### `npm start`
+## Development notes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Due to time constraints I treated the app as a prototype or proof-of-concept. This dictated some of my choices: a simpler approach here and there. I tried to explain as my of my thinking process in the commentaries within the code. In general I tried to make things as simple as possible, but with possibility of extending them easily.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The environment was set up with use of `create-react-app` and the app is using `redux` for state management, `redux-thunk` for asynchronous calls. For the dropdown I used `react-select` and the tests were written with `jest` and `react-testing-library`
 
-### `npm test`
+### State Management
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The approach I took when designing the shape of the app's state was rather simplistic. There is no right or wrong approach and the minimalistic way with a simple `actions` and `reducers` folders fits the complexity of the task. Every project is a living, growing entity and this approach feels like a good place to start, easy to modify in case of potential expansions of functionality.
+### Styles
 
-### `npm run build`
+I didn't try to make it as beautiful as possible, so the styles are pretty basic. As I said, I treated it as more of a prototype. The visual part in no way displays my knowledge of CSS and building layouts. I figured, the task was more concerned with the actual business logic and architectural approaches.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Testing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I covered some cases of various difficulty in tests. Of course, the tests can be expanded but for time's sake I only implemented several tests for each of the components mentioned in the actual task description.
